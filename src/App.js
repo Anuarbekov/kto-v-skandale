@@ -111,6 +111,7 @@ function App() {
   useEffect(() => {
     if (!window.sessionStorage.getItem("level")) {
       window.sessionStorage.setItem("level", "1");
+      setLevel('1');
       window.sessionStorage.setItem("skandals", JSON.stringify(skandals));
       showDescription();
       setTimeout(() => {
