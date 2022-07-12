@@ -10,8 +10,11 @@ function App() {
   const [input, setInput] = useState("");
   const [skandal, setSkandal] = useState("");
   const skandals = [
-    {level: 0,
-    description: "Пожалуйста прочтите pop-up."},
+    {
+      artist: "Meir",
+      level: 0,
+      description: "Пожалуйста прочтите pop-up.",
+    },
     {
       artist: "Кайрат Нуртас",
       level: 1,
