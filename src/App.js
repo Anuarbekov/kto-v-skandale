@@ -125,6 +125,7 @@ function App() {
         getRandomSkandal(arr.filter((ska) => ska.level == parseInt(level)))
       );
     } else {
+      setLevel(getLevel());
     }
   }, [level]);
 
