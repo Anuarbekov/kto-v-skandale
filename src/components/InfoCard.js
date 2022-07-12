@@ -4,10 +4,15 @@ import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 const InfoCard = ({ text, level }) => {
   return (
-    <Card sx={{ maxWidth: 1000, marginTop: 5, marginLeft: 4, marginRight: 4 }}>
+    <Card sx={{ maxWidth: 1000, marginTop: 3, marginLeft: 4, marginRight: 4 }}>
       <CardContent>
         <Divider
-          sx={{ marginTop: 1, fontFamily: "Montserrat", fontWeight: "bold", fontSize: 18 }}
+          sx={{
+            marginTop: 1,
+            fontFamily: "Montserrat",
+            fontWeight: "bold",
+            fontSize: 18,
+          }}
         >
           Ваш уровень: {level}
         </Divider>

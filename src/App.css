@@ -6,7 +6,7 @@
 }
 .App {
   text-align: center;
-  height: 110vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,13 +27,19 @@
   background-color: #7066e0 !important;
 }
 
-.popup-content {
-  margin: auto;
-  background-color: #7066e0 !important;
-  width: 50%;
-  padding: 5px;
+.footer {
+  position: absolute;
+  bottom: 0;
 }
-[role="tooltip"].popup-content {
-  width: 200px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+.footer div {
+  margin-bottom: 0.5em;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #7066e0;
+  font-family: "Montserrat";
+  font-weight: bold;
 }

@@ -1,7 +1,7 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-const InfoCard = ({ text, level }) => {
+const FinishCard = () => {
   return (
     <Card sx={{ maxWidth: 1000, marginTop: 5, marginLeft: 4, marginRight: 4 }}>
       <CardContent>
@@ -20,4 +20,4 @@ const InfoCard = ({ text, level }) => {
     </Card>
   );
 };
-export default InfoCard;
+export default FinishCard;

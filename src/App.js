@@ -5,6 +5,8 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { useState, useEffect } from "react";
 import JSConfetti from "js-confetti";
+import FinishCard from "./components/FinishCard";
+import Footer from "./components/Footer";
 const jsConfetti = new JSConfetti();
 function App() {
   const [input, setInput] = useState("");
@@ -122,7 +124,7 @@ function App() {
       setLevel(getLevel());
       let arr = JSON.parse(window.sessionStorage.getItem("skandals"));
       setSkandal(
-        getRandomSkandal(arr.filter((ska) => ska.level == parseInt(level)))
+        getRandomSkandal(arr.filter((ska) => ska.level === parseInt(level)))
       );
     } else {
       setLevel(getLevel());
@@ -179,7 +181,10 @@ function App() {
             </Button>
           </div>
         </>
-      ) : null}
+      ) : (
+        <FinishCard />
+      )}
+      <Footer />
     </div>
   );
 }
