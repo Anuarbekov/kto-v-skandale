@@ -114,9 +114,6 @@ function App() {
       setLevel('1');
       window.sessionStorage.setItem("skandals", JSON.stringify(skandals));
       showDescription();
-      setTimeout(() => {
-        window.location.reload();
-      }, 5000);
     } else if (parseInt(window.sessionStorage.getItem("level")) < 11) {
       setLevel(getLevel());
       let arr = JSON.parse(window.sessionStorage.getItem("skandals"));
