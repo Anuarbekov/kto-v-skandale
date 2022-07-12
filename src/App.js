@@ -8,7 +8,7 @@ import JSConfetti from "js-confetti";
 const jsConfetti = new JSConfetti();
 function App() {
   const [input, setInput] = useState("");
-  const [skandal, setSkandal] = useState({description: "Пожалуйста прочитайте pop-up"});
+  const [skandal, setSkandal] = useState("");
   const skandals = [
     {
       artist: "Кайрат Нуртас",
@@ -87,7 +87,7 @@ function App() {
       window.location.reload();
     }, 2000);
   };
-  const [level, setLevel] = useState("0");
+  const [level, setLevel] = useState("1");
   const getLevel = () => {
     return window.sessionStorage.getItem("level");
   };
@@ -111,7 +111,6 @@ function App() {
   useEffect(() => {
     if (!window.sessionStorage.getItem("level")) {
       window.sessionStorage.setItem("level", "1");
-      setLevel('1');
       window.sessionStorage.setItem("skandals", JSON.stringify(skandals));
       showDescription();
     } else if (parseInt(window.sessionStorage.getItem("level")) < 11) {
