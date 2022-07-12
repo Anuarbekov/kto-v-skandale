@@ -8,13 +8,8 @@ import JSConfetti from "js-confetti";
 const jsConfetti = new JSConfetti();
 function App() {
   const [input, setInput] = useState("");
-  const [skandal, setSkandal] = useState("");
+  const [skandal, setSkandal] = useState({description: "Пожалуйста прочтите pop-up."});
   const skandals = [
-    {
-      artist: "Meir",
-      level: 0,
-      description: "Пожалуйста прочтите pop-up.",
-    },
     {
       artist: "Кайрат Нуртас",
       level: 1,
