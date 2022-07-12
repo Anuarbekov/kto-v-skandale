@@ -10,6 +10,8 @@ function App() {
   const [input, setInput] = useState("");
   const [skandal, setSkandal] = useState("");
   const skandals = [
+    {level: 0,
+    description: "Пожалуйста прочтите pop-up."},
     {
       artist: "Кайрат Нуртас",
       level: 1,
@@ -87,7 +89,7 @@ function App() {
       window.location.reload();
     }, 2000);
   };
-  const [level, setLevel] = useState("1");
+  const [level, setLevel] = useState("0");
   const getLevel = () => {
     return window.sessionStorage.getItem("level");
   };
