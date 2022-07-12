@@ -110,9 +110,9 @@ function App() {
   };
   useEffect(() => {
     if (!window.sessionStorage.getItem("level")) {
+      showDescription();
       window.sessionStorage.setItem("level", "1");
       window.sessionStorage.setItem("skandals", JSON.stringify(skandals));
-      showDescription();
     } else if (parseInt(window.sessionStorage.getItem("level")) < 11) {
       setLevel(getLevel());
       let arr = JSON.parse(window.sessionStorage.getItem("skandals"));
