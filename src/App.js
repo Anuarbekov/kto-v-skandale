@@ -8,7 +8,12 @@ import JSConfetti from "js-confetti";
 const jsConfetti = new JSConfetti();
 function App() {
   const [input, setInput] = useState("");
-  const [skandal, setSkandal] = useState("");
+  const [skandal, setSkandal] = useState({
+    artist: "Кайрат Нуртас",
+    level: 1,
+    description:
+      "Популярный казахстанский певец ... подмочил свою репутацию еще в 2011 года. На видео, появившемся в интернете видно, как ... размахивает ножом и выражается нецензурно. Инцидент произошел в разгар популярности певца. Его даже успели обсудить на одном из казахстанских ток-шоу, где один из гостей пытался оправдать певца тем, что в молодости всем свойственно выпивать и все могут ошибаться.",
+  });
   const skandals = [
     {
       artist: "Кайрат Нуртас",
