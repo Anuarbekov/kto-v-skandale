@@ -8,7 +8,7 @@ import JSConfetti from "js-confetti";
 const jsConfetti = new JSConfetti();
 function App() {
   const [input, setInput] = useState("");
-  const [skandal, setSkandal] = useState("");
+  const [skandal, setSkandal] = useState({description: "Пожалуйста прочитайте pop-up"});
   const skandals = [
     {
       artist: "Кайрат Нуртас",
@@ -147,7 +147,7 @@ function App() {
 
   return (
     <div className="App">
-      {parseInt(level) < 11 ? (
+      {level < 11 ? (
         <>
           <InfoCard text={skandal.description} level={level}></InfoCard>
           <div className="input-check">
