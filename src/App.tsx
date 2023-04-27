@@ -15,8 +15,8 @@ import {
 } from "./utils";
 
 function App() {
-  const [input, setInput] = useState("");
-  const [level, setLevel] = useState(1);
+  const [input, setInput] = useState<string>("");
+  const [level, setLevel] = useState<number>(1);
   const [skandal, setSkandal] = useState({
     artist: "Кайрат Нуртас",
     level: 1,
@@ -66,7 +66,7 @@ function App() {
   };
   const handleCheck = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    if (input === skandal.artist) {
+    if (input.toLowerCase() === skandal.artist.toLowerCase()) {
       let l = getLevelFromSessionStorage();
       sessionStorage.setItem("level", (l + 1).toString());
       alertSuccess();
